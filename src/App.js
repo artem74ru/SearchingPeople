@@ -4,10 +4,22 @@ import Tab   from "./components/Tab/Tab.jsx";
 import './App.css';
 import axios from "axios";
 
-async function fetchUsers(params) {
-  const response = await axios.get('https://stoplight.io/mocks/kode-frontend-team/koder-stoplight/86566464/users')
-  console.log(response.data.items)
+const options = {
+  method: "GET",
+  url: "https://stoplight.io/mocks/kode-frontend-team/koder-stoplight/86566464/users",
+  params: { __example: "ios" }, // получение из разных департаментов
+  headers: { Accept: "application/json, application/xml" },
+};
+
+async function Users() {
+    try {
+    const { data } = await axios.request(options);
+    console.log(data);
+    } catch (error) {
+      console.error(error);
+  }
 }
+
 
 function App() {
   return (
@@ -15,9 +27,7 @@ function App() {
       <Header />
       <Search />
       <Tab />
-      <button onClick={fetchUsers}>Get Users</button>
-    
-
+      <button onClick={Users}>Get Users</button>
     </div>
   );
 }
