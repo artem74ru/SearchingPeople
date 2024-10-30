@@ -11,6 +11,7 @@ const options = {
   method: "GET",
   url: "https://stoplight.io/mocks/kode-frontend-team/koder-stoplight/86566464/users",
   params: { __example: "all" }, // получение из разных департаментов
+  params: { __example: "all" }, // получение из разных департаментов
   headers: { Accept: "application/json, application/xml" },
 };
 
