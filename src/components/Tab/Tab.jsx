@@ -1,6 +1,8 @@
 import "./Tab.css";
+import UserList from "../UserList/UserList";
 
-export default function Tab() {
+export default function Tab({users}) {
+
   return (
     <div className="tab-wrapper">
       <div className="tab">
@@ -18,7 +20,7 @@ export default function Tab() {
         <label for="tab__btn-6">Android</label>
 
         <div class="tab-content" id="content-1">
-          Все
+          <UserList users={users}/>
         </div>
         <div class="tab-content" id="content-2">
           Дизайнеры

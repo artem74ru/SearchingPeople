@@ -5,8 +5,8 @@ import User from '../User/User';
 const UserList = ({users}) => {
     return (
       <>
-        {users.map((user, index) => (
-          <User user={user} key={user.id}  />
+        {users.map((user) => (
+          <User user={user} key={user.id} department={user.department} />
         ))}
       </>
     );

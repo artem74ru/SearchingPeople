@@ -4,11 +4,13 @@ import "./User.css";
 const User = (props) => {
     return (
       <div className="user">
-        <div className="data">
-          {props.user.data} {props.user.id} {props.user.avatarUrl}
-          {props.user.birthday} {props.user.department} {props.user.firstName}
+        <div className="user-data">
+          <div className="user-avatar"><img src="{props.user.avatarUrl}" alt="Photo"/></div>
+          <div>
+            <div className="user-name-surname-tag">{props.user.firstName} {props.user.lastName} {props.user.userTag}</div>
+            <div className="department">{props.user.department}</div>
+          </div>
         </div>
-        <button>Удалить</button>
       </div>
     );
 };
