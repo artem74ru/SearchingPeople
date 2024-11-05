@@ -19,7 +19,6 @@
 
 .tab-content {
   display: none;
-
   width: 100%;
   margin-top: 1rem;
 }
@@ -29,7 +28,14 @@
 #tab__btn-3:checked~#content-3,
 #tab__btn-4:checked~#content-4,
 #tab__btn-5:checked~#content-5,
-#tab__btn-6:checked~#content-6 {
+#tab__btn-6:checked~#content-6,
+#tab__btn-7:checked~#content-7,
+#tab__btn-8:checked~#content-8,
+#tab__btn-9:checked~#content-9,
+#tab__btn-10:checked~#content-10,
+#tab__btn-11:checked~#content-11,
+#tab__btn-12:checked~#content-12,
+#tab__btn-13:checked~#content-13 {
   display: block;
 }
 
